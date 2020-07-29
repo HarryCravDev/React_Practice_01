@@ -2,10 +2,14 @@ import React from "react";
 import SearchBar from "./Components/searchBar/SearchBar";
 
 export class App extends React.Component {
+  onSearchSubmit = (term) => {
+    console.log(term);
+  };
+
   render() {
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSubmit={this.onSearchSubmit} />
       </div>
     );
   }
